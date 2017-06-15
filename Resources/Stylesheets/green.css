@@ -1,0 +1,15 @@
+body {
+  background: radial-gradient(#ade6ba, #50b14a, #277108);
+}
+.buttons {
+  background-color: #509e4c;
+  border-color: #073e0a;
+}
+.buttons:hover {
+  background-color: #045004;
+  border-color: #6ea551;
+}
+.appearingDivs {
+  background-color: rgba(22, 97, 32, 0.55);
+  border-color: #1b4807;
+}
