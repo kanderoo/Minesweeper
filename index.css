@@ -1,0 +1,291 @@
+@font-face {font-family: Share_Tech; src: url("./Resources/Fonts/Share_Tech/ShareTech-Regular.ttf")}
+@font-face {font-family: Raleway; src: url("./Resources/Fonts/Raleway/Raleway-Regular.ttf")}
+@font-face {font-family: Patua_One; src: url("./Resources/Fonts/Patua_One/PatuaOne-Regular.ttf")}
+@font-face {font-family: Baloo; src: url("./Resources/Fonts/Baloo/Baloo-Regular.ttf")}
+.covered {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    background: radial-gradient(#e4e4e4, #969696);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 2px 0 rgba(105, 105, 105, 0.56);
+}
+.uncovered {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    background: radial-gradient(#ffffff, #cacaca);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: default;
+    box-shadow: inset 1px 1px 2px 0 rgba(105, 105, 105, 0.56);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.challengeLvlButtons {
+    width: 150px;
+    height: 35px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    color: #dadada;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-family: Patua_One;
+}
+.exploded {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: #d8d8d8;
+    text-align: center;
+    cursor: pointer;
+    background: radial-gradient(#fffcfc, #ffa6a6);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form {
+    height: 0px;
+    width: 500px;
+    display: none;
+}
+input {
+    margin: 5px;
+}
+body {
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+table {
+    margin: auto;
+}
+#controlDiv {
+    width: 800px;
+    text-align: center;
+    padding: 15px;
+    padding-top: 3px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    transition-duration: 0.4s;
+    position: fixed;
+    left: 50%;
+    margin-left: -400px;
+}
+h1 {
+    color: #dad6d7;
+    font-family: Share_Tech
+}
+._1, ._2, ._3, ._4, ._5, ._6, ._7, ._8 {
+    font-family: Baloo;
+    font-size: 19px;
+}
+._1 {
+    color: #4949a5;
+}
+._2 {
+    color: #bd7a7a;
+}
+._3 {
+    color: #749074;
+}
+._4 {
+    color: #6b4949;
+}
+._5 {
+    color: #e0a539;
+}
+._6 {
+    color: #948613;
+}
+._7 {
+    color: #9c9c9c;
+}
+._8 {
+    color: #209020;
+}
+.appearingDivs p {
+    font-family: Raleway;
+    color: #ece6e7
+}
+form {
+    height: 0px;
+    display: none;
+    text-align: center;
+    margin: auto;
+    color: #ececec;
+    font-family: Raleway;
+    font-weight: bold;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+}
+input[type="number"] {
+    background-color: rgba(120, 157, 243, 0.31);
+    border-width: 1px;
+    border-style:solid #6161ad;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom: 2px solid #372977;
+    width: 70px;
+    color: #ececec;
+    font-family: Raleway;
+    font-weight: bold;
+    transition-duration: 0.4s;
+}
+input[type="number"]:focus {
+    background-color: #3c3c96;
+    border-bottom-color: #3c70b1;
+}
+input[type="submit"] {
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    color: #dfe0e5;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px;
+    transition-duration:0.4s;
+}
+#winDiv, #loseDiv {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    padding-top: 3px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    transition-duration: 0.4s;
+    height: 0px;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -115px;
+    z-index: -4;
+}
+#winDiv p, #loseDiv p {
+  font-weight: bold;
+}
+#flagsElement {
+    font-family: Share_Tech;
+    color: #dc7b7b;
+    font-size: 25px;
+    position: fixed;
+    background-color: #d8d8d8;
+    border: 2px solid #afafaf;
+    padding: 10px;
+    border-radius: 7px;
+    left: 2%;
+    display: none;
+    z-index: 100;
+}
+#timerElement {
+    font-family: Share_Tech;
+    color: #dc7b7b;
+    font-size: 25px;
+    position: fixed;
+    background-color: #d8d8d8;
+    border: 2px solid #afafaf;
+    padding: 10px;
+    border-radius: 7px;
+    right: 2%;
+    display: none;
+    z-index: 100;
+}
+.failFlag {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    background: radial-gradient(#ffbcbc, #ff7474);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: default;
+}
+.custom {
+    font-weight: bold;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0px;
+}
+#spacer {
+    height: 85px;
+    border-bottom: 4px solid blue;
+    margin-bottom: 10px;
+}
+#settingsButton {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  width: 50px;
+    height: 35px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    color: #dadada;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-family: Patua_One;
+}
+#settingsDiv {
+  display: none;
+  width: 800px;
+  text-align: center;
+  padding: 15px;
+  padding-top: 3px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  transition-duration: 0.4s;
+  position: fixed;
+  left: 50%;
+  margin-left: -400px;
+  z-index: 1000;
+}
+.settingButtons {
+  font-family: Patua_One;
+  color: #dadada;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 90px;
+  height: 25px;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+}
+#closeSettings {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-family: Patua_One;
+  color: #dadada;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+}
+h3 {
+  font-family: Patua_One;
+  color: #dadada;
+}

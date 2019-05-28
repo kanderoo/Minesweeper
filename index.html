@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="./Resources/Stylesheets/blue.css" id="styleLink">
+        <link rel="stylesheet" href="index.css" id="styleLink">
+        <link rel="icon" href="./Resources/favicon.png">
+    </head>
+    <body>
+        <div class="appearingDivs" id="controlDiv">
+            <h1>Minesweeper!</h1>
+        <button class="challengeLvlButtons buttons" onclick="decideNumber('beginner')">Beginner</button>
+        <button class="challengeLvlButtons buttons" onclick="decideNumber('intermediate')">Intermediate</button>
+        <button class="challengeLvlButtons buttons" onclick="decideNumber('expert')">Expert</button>
+        <button class="challengeLvlButtons buttons" onclick="showForm()">Custom</button> <br>
+        <form onsubmit="return false;">
+            Rows: <input id="rowsInput" type="number" min="1" max="50"> <br>
+            Columns: <input id="columnsInput" type="number" min="1" max="50"> <br>
+            Mines: <input id="minesInput" type="number" min="1" max="150"> <br>
+            <input type="submit" onclick="decideNumber('custom')" class="buttons">
+        </form>
+            <p>Minesweeper is the classic strategy game you remember. Your goal is to open all of the cells except for the mines. In each cell there is either a bomb, a number, or a blank space. The numbers will tell you how many bombs are in the surrounding 8 spaces. The blank cells will open a large chunk of cells. The bombs, of couse, blow up. To mark a cell that you think is a bomb, simply right click the cell to flag it. Upon opening all of the cells without opening any of the bombs, you win!</p>
+        </div>
+        <button id="settingsButton" class="buttons" onclick="openSettings()">&#9881;</button>
+        <div class="appearingDivs" id="winDiv">
+            <h1>You Win!</h1>
+            <h1>&#128526;</h1>
+            <p>Great Job!</p>
+            <p>You Won <span id="spanDifficulty"></span></p>
+            <button class="challengeLvlButtons buttons" onclick="playAgain('win')">Play Level Again</button> <button class="challengeLvlButtons buttons" onclick="playBoardAgain('win')">Play Board Again</button> <button class="challengeLvlButtons buttons" onclick="backToStart('win')">Choose Different Level</button>
+        </div>
+        <div class="appearingDivs" id="loseDiv">
+            <h1>You Lost.</h1>
+            <h1>&#128542;</h1>
+            <p>Better Luck Next Time!</p>
+            <p>You Tried <span id="spanDifficultyLose"></span></p>
+            <button class="challengeLvlButtons buttons" onclick="playAgain('lose')">Play Level Again</button> <button class="challengeLvlButtons buttons" onclick="playBoardAgain('lose')">Play Board Again</button> <button class="challengeLvlButtons buttons" onclick="backToStart('lose')">Choose Different Level</button>
+        </div>
+        <div class="appearingDivs" id="settingsDiv">
+          <button id="closeSettings" class="buttons" onclick="closeSettings()">X</button>
+          <h1>Settings</h1>
+          <h3>Color Themes:</h3>
+          <button onclick="changeColor('red')" class="settingButtons buttons">Red</button>
+          <button onclick="changeColor('orange')" class="settingButtons buttons">Orange</button>
+          <button onclick="changeColor('yellow')" class="settingButtons buttons">Yellow</button>
+          <button onclick="changeColor('green')" class="settingButtons buttons">Green</button>
+          <button onclick="changeColor('blue')" class="settingButtons buttons">Blue</button>
+          <button onclick="changeColor('purple')" class="settingButtons buttons">Purple</button>
+        </div>
+        <p id="flagsElement"></p>
+        <p id="timerElement">000</p>
+        <script src="index.js"></script>
+    </body>
+</html>
